@@ -20,7 +20,8 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            ziggy: path.resolve(__dirname, "vendor/tightenco/ziggy/dist/"), // エイリアスの追加
+            "@": path.resolve(__dirname, "resources/js"),
+            ziggy: path.resolve("vendor/tightenco/ziggy/dist/vue.es.js"), // ziggy のエイリアスを追加
         },
     },
 });
