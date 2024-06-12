@@ -13,7 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $users = User::factory(10)->create();
+
+        foreach ($users as $user) {
+            echo "User Email: " . $user->email . PHP_EOL;
+            echo "User Password: password" . PHP_EOL; // 全てのユーザーに共通のパスワードを表示
+        }
 
         $this->call([
             PostSeeder::class,
